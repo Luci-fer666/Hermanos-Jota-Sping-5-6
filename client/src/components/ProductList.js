@@ -1,11 +1,12 @@
 import '../styles.css';
 import ProductCard from './ProductCard';
 
-function ProductList({productos}) {
+function ProductList({productos, agregarAlCarrito}) {
     return (<>
         <ul>
         {productos.map(producto => (
-        <ProductCard   
+        <ProductCard  
+          agregarAlCarrito={agregarAlCarrito}
           id={producto.id}
           nombre={producto.nombre}
           precio={producto.precio}

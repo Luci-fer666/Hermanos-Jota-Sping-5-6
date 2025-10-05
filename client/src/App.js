@@ -12,6 +12,11 @@ import React, { useState } from 'react';
 
 function App() {
       const [vistaActual, setVistaActual] = useState('inicio');
+      const [carrito, setCarrito] = useState([]);
+
+    const agregarAlCarrito = (idProducto) => {
+    setCarrito(prev => [...prev, idProducto]);
+  };
   return (
     <div className="App">
         <Navbar  
@@ -19,13 +24,19 @@ function App() {
         productos ={() => setVistaActual('productos')}
         contactos ={() => setVistaActual('producto')}
         carrito ={() => setVistaActual('carrito')}
+        contadorCarrito={carrito.length}
         carritoCuenta ={() => setVistaActual('contacto')}
         />
 
       {vistaActual === 'inicio' && <IndexBody />}
-      {vistaActual === 'productos' && <ProductosBody productos={productos} />}
+      {vistaActual === 'productos' && <ProductosBody 
+                                      productos={productos}
+                                      agregarAlCarrito={agregarAlCarrito} />}
       {vistaActual === 'producto' && <ProductoBody />}
-      {vistaActual === 'carrito' && <CarritoBody />}
+      {vistaActual === 'carrito' && <CarritoBody 
+                                      carrito={carrito} 
+                                      agregarAlCarrito={agregarAlCarrito}
+                                      productos={productos} />}
       {vistaActual === 'contacto' && <ContactForm />}
 
         <Footer /> 

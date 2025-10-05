@@ -16,7 +16,7 @@ function Navbar({inicio, productos, contactos, carrito, carritoCuenta}) {
 		    	<a href="#!" onClick={(e) => { e.preventDefault(); productos(); }}>Productos</a>
 		    	<a href="#!" onClick={(e) => { e.preventDefault(); contactos(); }}>Contacto</a>
 		    	<a href="#!" onClick={(e) => { e.preventDefault(); carrito(); }}>
-                    <i class="fas fa-shopping-cart"></i>Carrito<span id="cart-count" aria-live="polite">0,{carritoCuenta}</span>
+                    <i class="fas fa-shopping-cart"></i>Carrito <span id="cart-count" aria-live="polite">{carritoCuenta}</span>
                 </a>
             </nav> 
 
