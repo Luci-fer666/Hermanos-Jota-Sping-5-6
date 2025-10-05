@@ -1,0 +1,66 @@
+.background-main{
+  margin-top: 10px;
+  background-color: #ffffff;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  width: 85%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.productos {
+  align-content: center;
+  align-self: center;
+  background: #F5E6D3;
+  color: #0f172a;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.4;
+  padding-bottom: 3rem;
+}
+.Multimedia{
+  text-align: center;
+ }
+ #video {
+  width: 70%; 
+  height: auto; 
+  border-radius: 8px;
+}
+.product-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#bienvenida {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.destacados h2 {
+  margin-left: 30px;
+}
+.historia {
+  margin-top: 150px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+.historia h2 {
+  margin-top: 150px;
+  text-align: center;
+}
+.historia p {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.que-ofrecemos {
+  margin-top: 150px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+.que-ofrecemos p {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.que-ofrecemos h2 {
+  margin-top: 150px;
+  text-align: center;    
+}

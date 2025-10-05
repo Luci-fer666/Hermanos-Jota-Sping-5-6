@@ -1,5 +1,4 @@
-import '../styles.css';
-import logo from "../assets/img/logo.svg"; 
+import './Navbar.css';
 
 function Navbar({inicio, productos, contactos, carrito, carritoCuenta}) {
     return (
@@ -7,7 +6,7 @@ function Navbar({inicio, productos, contactos, carrito, carritoCuenta}) {
 	<header className="site-header">
     	    <div className="branding">
       		    <a href="index.html" className="brand">
-          	    	<img id="logo" src={logo} alt="Icono Hermanos Jota"/>
+          	    	<img id="logo" src="/assets/img/logo.svg" alt="Icono Hermanos Jota"/>
       		    </a>
     	    </div>
 
@@ -16,12 +15,12 @@ function Navbar({inicio, productos, contactos, carrito, carritoCuenta}) {
 		    	<a href="#!" onClick={(e) => { e.preventDefault(); productos(); }}>Productos</a>
 		    	<a href="#!" onClick={(e) => { e.preventDefault(); contactos(); }}>Contacto</a>
 		    	<a href="#!" onClick={(e) => { e.preventDefault(); carrito(); }}>
-                    <i class="fas fa-shopping-cart"></i>Carrito <span id="cart-count" aria-live="polite">{carritoCuenta}</span>
+                    Carrito <span id="cart-count" aria-live="polite">{carritoCuenta}</span>
                 </a>
             </nav> 
 
-			<form className="search" action="productos.html" method="get" role="search">
-			    <label for="q" className="visually-hidden">Buscar</label>
+			<form className="search" action="#" method="get" role="search">
+			    <label htmlFor="q" className="visually-hidden">Buscar</label>
 			    <input id="q" name="q" type="search" placeholder="Buscar muebles…" value=""/>
 			    <button id="boton-buscar" type="submit">Buscar</button>
 			</form>

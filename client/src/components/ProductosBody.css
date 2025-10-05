@@ -1,0 +1,24 @@
+.background-main{
+  margin-top: 10px;
+  background-color: #ffffff;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  width: 85%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.productos {
+  align-content: center;
+  align-self: center;
+  background: #F5E6D3;
+  color: #0f172a;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.4;
+  padding-bottom: 3rem;
+}
+.catalogo {
+  max-width: auto;
+  margin-top: 10px;
+  padding: 30px;
+}

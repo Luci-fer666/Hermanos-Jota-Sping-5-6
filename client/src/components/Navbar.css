@@ -1,0 +1,35 @@
+.branding {
+  display: flex; /* Convierte el contenedor en un flex container */
+  align-items: center; /* Centra verticalmente el logo y el texto */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  text-align: center; /* Asegura que el texto esté centrado */
+  gap: 10px; 
+}
+nav {
+  display: flex;
+  gap: 2rem; 
+  justify-content: center; 
+  align-items: center;
+  flex-wrap: wrap; 
+  color: #C47A6D;
+}
+.site-nav a {
+  margin-left: 5px;
+  color: #C47A6D;
+  text-decoration: none;
+}
+.search {
+  display: flex;
+  gap: 1rem; /* espacio entre el input y el botón */
+  align-items: center;
+  flex-wrap: wrap;
+}
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; border: 0; padding: 0; margin: -1px;
+}
+.site-nav{
+    align-items: center;
+}

@@ -9,7 +9,7 @@ export const productos = [
     "acabado": "Aceite natural ecológico",
     "capacidad": "6 compartimentos interiores",
     "peso": "60 kg",
-    "imagen": "assets/img/Aparador Uspallata.png"
+    "imagen": "/assets/img/Aparador Uspallata.png"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@ export const productos = [
     "acabado": "Laca mate ecológica",
     "capacidad": "45 kg por estante",
     "modulares": "5 estantes ajustables",
-    "imagen": "assets/img/Biblioteca Recoleta.png"
+    "imagen": "/assets/img/Biblioteca Recoleta.png"
   },
   {
     "id": 3,
@@ -33,7 +33,7 @@ export const productos = [
     "acabado": "Cera vegetal, tapizado premium",
     "tapizado": "Repelente al agua y manchas",
     "confort": "Espuma alta densidad",
-    "imagen": "assets/img/Butaca Mendoza.png"
+    "imagen": "/assets/img/Butaca Mendoza.png"
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@ export const productos = [
     "acabado": "Cuero anilina premium",
     "rotacion": "360° silenciosa y suave",
     "garantia": "10 años en estructura",
-    "imagen": "assets/img/Sillón Copacabana.png"
+    "imagen": "/assets/img/Sillón Copacabana.png"
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@ export const productos = [
     "acabado": "Mármol pulido, aceite natural en madera",
     "peso": "42 kg",
     "cargaMaxima": "25 kg distribuidos",
-    "imagen": "assets/img/Mesa de Centro Araucaria.png"
+    "imagen": "/assets/img/Mesa de Centro Araucaria.png"
   },
   {
     "id": 6,
@@ -69,7 +69,7 @@ export const productos = [
     "acabado": "Barniz mate de poliuretano",
     "almacenamiento": "1 cajón + repisa inferior",
     "caracteristicas": "Cajón con cierre suave",
-    "imagen": "assets/img/Mesa de Noche Aconcagua.png"
+    "imagen": "/assets/img/Mesa de Noche Aconcagua.png"
   },
   {
     "id": 7,
@@ -81,7 +81,7 @@ export const productos = [
     "relleno": "Espuma HR + plumón reciclado",
     "estructura": "Madera de eucalipto certificada FSC®",
     "sostenibilidad": "Materiales 100% reciclables",
-    "imagen": "assets/img/Sofá Patagonia.png"
+    "imagen": "/assets/img/Sofá Patagonia.png"
   },
   {
     "id": 8,
@@ -93,7 +93,7 @@ export const productos = [
     "acabado": "Aceite-cera natural",
     "capacidad": "6-10 comensales",
     "extension": "Sistema de mariposa central",
-    "imagen": "assets/img/Mesa Comedor Pampa.png"
+    "imagen": "/assets/img/Mesa Comedor Pampa.png"
   },
   {
     "id": 9,
@@ -105,7 +105,7 @@ export const productos = [
     "acabado": "Laca mate, pintura epoxi",
     "apilables": "Hasta 6 sillas",
     "incluye": "Set de 4 sillas",
-    "imagen": "assets/img/Sillas Córdoba.png"
+    "imagen": "/assets/img/Sillas Córdoba.png"
   },
   {
     "id": 10,
@@ -117,7 +117,7 @@ export const productos = [
     "acabado": "Laca mate resistente",
     "almacenamiento": "1 cajón con organizador",
     "cables": "Pasacables integrado",
-    "imagen": "assets/img/Escritorio Costa.png"
+    "imagen": "/assets/img/Escritorio Costa.png"
   },
   {
     "id": 11,
@@ -129,7 +129,7 @@ export const productos = [
     "acabado": "Base cromada, tapizado premium",
     "regulacion": "Altura + inclinación respaldo",
     "certificacion": "Ergonomía europea EN 1335",
-    "imagen": "assets/img/Silla de Trabajo Belgrano.png"
+    "imagen": "/assets/img/Silla de Trabajo Belgrano.png"
   },
   {
     "id": 12,
@@ -141,6 +141,6 @@ export const productos = [
     "acabado": "Aceite natural, tapizado premium",
     "colchon": "Compatible con colchón 160×200",
     "caracteristicas": "Cabecero flotante acolchado",
-    "imagen": "assets/img/logo.svg"
+    "imagen": "/assets/img/logo.svg"
   }
 ];

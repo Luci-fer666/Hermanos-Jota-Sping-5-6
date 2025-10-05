@@ -1,0 +1,35 @@
+.site-footer {
+  background-color: #87A96B;
+  width: 100%; /* fuerza el ancho completo de la ventana */
+  margin: 0;     /* elimina márgenes que puedan achicarlo */
+  padding: 2rem 0;
+  box-sizing: border-box;
+  margin-bottom: 0;  
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Desde celular, los elementos del footer */
+                              /* Se pondran en una sola columna */
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #F5E6D3;
+  text-align: left;
+}
+@media (min-width: 901px) {
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en desktop */
+  }
+}
+.footer-section {
+    min-width: 200px;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; 
+  gap: 0.5rem;
+}

@@ -1,4 +1,3 @@
-import './styles.css';
 import Navbar from './/components/Navbar.js';
 import Footer from './components/Footer.js';
 import { productos } from '../src/productos.js';
@@ -22,13 +21,15 @@ function App() {
         <Navbar  
         inicio={() =>  setVistaActual('inicio')}
         productos ={() => setVistaActual('productos')}
-        contactos ={() => setVistaActual('producto')}
+        contactos ={() => setVistaActual('contacto')}
         carrito ={() => setVistaActual('carrito')}
         contadorCarrito={carrito.length}
         carritoCuenta ={() => setVistaActual('contacto')}
         />
 
-      {vistaActual === 'inicio' && <IndexBody />}
+      {vistaActual === 'inicio' && <IndexBody
+                                      productos={productos}
+                                      agregarAlCarrito={agregarAlCarrito} />}
       {vistaActual === 'productos' && <ProductosBody 
                                       productos={productos}
                                       agregarAlCarrito={agregarAlCarrito} />}
@@ -39,7 +40,11 @@ function App() {
                                       productos={productos} />}
       {vistaActual === 'contacto' && <ContactForm />}
 
-        <Footer /> 
+        <Footer 
+        inicio={() =>  setVistaActual('inicio')}
+        productos ={() => setVistaActual('productos')}
+        contactos ={() => setVistaActual('contacto')}
+        /> 
     </div>
   );}
 

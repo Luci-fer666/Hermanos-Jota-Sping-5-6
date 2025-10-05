@@ -25,7 +25,7 @@ body{
     flex-direction: column;
     margin: 0;
 }
-.site-nav {
+.nav {
   display: flex;
   gap: 2rem; 
   justify-content: center; 
@@ -435,7 +435,7 @@ main a:hover {
   color: #c47a6d; 
 }
 
-
+d
 
 /*  Estilos para la página Producto */
 #producto-individual {
