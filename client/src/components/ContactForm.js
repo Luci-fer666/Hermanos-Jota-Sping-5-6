@@ -1,28 +1,71 @@
+import React, { useState } from 'react';
 import './ContactForm.css';
-
 function ContactForm() {
+  const [formData, setFormData] = useState({
+    nombre: "",
+    email: "",
+    mensaje: ""
+  });
+
+  const [exito, setExito] = useState(false);
+
+  const Cambio = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const Envio = (e) => {
+    e.preventDefault();
+    console.log("Datos del formulario:", formData);
+    setExito(true);
+    setFormData({
+      nombre: "",
+      email: "",
+      mensaje: ""
+    });
+  };
+
     return (
         <div className="main-container">
           <div className="container-form">
             <h2>¡Dejanos tu mensaje!</h2>
 
-            <form id="form-contacto" className="formulario" action="#" method="post" noValidate>
+            <form onSubmit={Envio} id="form-contacto" className="formulario" action="#" method="post" noValidate>
               <div className="campo-formulario">
                 <label htmlFor="nombre">Nombre:</label>
-                <input id="nombre" name="nombre" type="text" placeholder="Ingrese su nombre" className="campo" required />
+                <input
+                  value={formData.nombre}
+                  onChange={Cambio} 
+                  id="nombre" name="nombre" 
+                  type="text" placeholder="Ingrese su nombre" 
+                  className="campo" required />
               </div>
 
               <div className="campo-formulario">
                 <label htmlFor="email">Correo electrónico:</label>
-                <input id="email" name="email" type="email" placeholder="Ingrese su email" className="campo" required />
+                <input
+                 value={formData.email}
+                onChange={Cambio} 
+                id="email" name="email" 
+                type="email" placeholder="Ingrese su email" 
+                className="campo" required />
               </div>
 
               <div className="campo-formulario">
                 <label htmlFor="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje aquí" required></textarea>
+                <textarea
+                value={formData.mensaje}
+                onChange={Cambio} 
+                id="mensaje" name="mensaje" 
+                rows="5" placeholder="Escribí tu mensaje aquí" 
+                required></textarea>
               </div>
 
               <button type="submit" className="boton-enviar">Enviar</button>
+               {exito && <p style={{ color: "green" }}> Mensaje enviado correctamente</p>}
             </form>
           </div>
 

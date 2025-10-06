@@ -36,10 +36,6 @@
   margin-top: 20px;
   color: #555;
 }
-
-
-
-
 #producto-caracteristicas-container {
   grid-column: 1;
   display: flex;
@@ -82,4 +78,25 @@
 #producto-caracteristicas li strong {
   font-weight: 600;
   color: #222;
+}
+.btn[disabled] { opacity: .6; cursor: not-allowed; }
+.btn {
+  display: block;
+  background: #0f172a;
+  color: #fff;
+  border-color: #0f172a;
+  align-self: center;
+  margin: 30px;  /* ---Centra el boton--- */
+  padding: 10px;
+  border-radius: 8px;
+}
+.btn:hover {
+  background: #3d5274;
+}
+.btn.ghost {
+  background: #fff;
+  color: #0f172a;
+}
+.btn.ghost:hover {
+  background: #f1f5f9;
 }

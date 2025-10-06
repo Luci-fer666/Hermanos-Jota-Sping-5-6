@@ -1,6 +1,6 @@
 import './Navbar.css';
 
-function Navbar({inicio, productos, contactos, carrito, carritoCuenta}) {
+function Navbar({inicio, productos, contactos, carrito, contadorCuenta}) {
     return (
 	<>	
 	<header className="site-header">
@@ -15,7 +15,7 @@ function Navbar({inicio, productos, contactos, carrito, carritoCuenta}) {
 		    	<a href="#!" onClick={(e) => { e.preventDefault(); productos(); }}>Productos</a>
 		    	<a href="#!" onClick={(e) => { e.preventDefault(); contactos(); }}>Contacto</a>
 		    	<a href="#!" onClick={(e) => { e.preventDefault(); carrito(); }}>
-                    Carrito <span id="cart-count" aria-live="polite">{carritoCuenta}</span>
+                    Carrito <span id="cart-count" aria-live="polite">{contadorCuenta}</span>
                 </a>
             </nav> 
 

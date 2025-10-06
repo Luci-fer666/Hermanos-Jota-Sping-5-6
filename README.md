@@ -1,7 +1,6 @@
 <h1>Repositorio del grupo 14</h1>
 
 # Mueblería Hermanos Jota — Sprint 3 y 4
-
 Sitio web dinamico con HTML, CSS y JavaScript utilizando tecnologias React y ExpressJS con NodeJS que simula un e-commerce de muebles.  
 Incluye páginas de inicio, catálogo de productos, detalle de producto y formulario de contacto con validaciones.
 
@@ -48,18 +47,45 @@ contratado a ustedes para construir su primera plataforma de e-commerce.</p>
 - NodeJS
 - GitHub Pages para el deploy
 
-- ## Funcionalidades
+## Funcionalidades
 - Página de inicio con productos destacados.
 - Catálogo generado dinámicamente desde un array de objetos.
-- Detalle de producto identificado por parámetro `?id=`. (AUN NO IMPLEMENTADO)
-- Carrito con contador persistente en `localStorage`. 
+- Detalle de producto identificado por parámetro `?id=`. 
 - Formulario de contacto con validación en cliente.
 - Diseño responsive con Flexbox y Grid.
+
+## Descripcion
+El backend se aloja en el puerto 4000, teniendo las rutas 
+- http://localhost:4000/                Ruta de inicio
+- http://localhost:4000/products        Muestra todos los productos como JSON
+- http://localhost:4000/products/{id}   Muestra el producto del id seleccionado como JSON
+- http://localhost:4000/users           Muestra todos los usuarios como JSON
+- http://localhost:4000/users/{id}      Muestra el usuario con el id seleccionado como JSON
+
+Cuenta con dos Routers(para productos y para usuarios), un logger para las peticiones del servidor, un midelware de rutas no encontradas, manejador de errores centralizado y traductor de JSON. 
+
+Por el lado del frontend, este se aloja en el puerto 3000, teniendo una sola ruta
+- http://localhost:3000/
+Este apartado cuenta con secciones de Inicio, Productos, Contacto y un Carrito, los cuales comparten espacio un unico archivo html, mostrando solo el componente que es requerido en el momento indicado.
+Cuenta con componentes de: 
+- Navbar            Header, Barra de Navegacion con icono del Carrito Actualizable
+- Footer            Footer con datos varios
+- ProductCard       Tarjeta de producto reutilizable
+- ProductList       Lista de productos, contiene multiples repeticiones 
+                    de ProductCard
+- ProductDetail     Body de la pagina para observar el producto 
+                    seleccionado a detalle y añadirlo al carrito
+- ProductBody       Body de la pagina donde se renderiza el ProductList
+- BodyIndex         Body de inicio, tiene contenido de presentacion
+- BodyCarrito       Body del carrito, renderiza los productos dentro de su 
+                    array segun el id
+- ContactForm       Body del apartado contactos, con opciones de enviar mensaje 
+                    y visualizar datos de contacto
 
 ## Cómo ejecutar
  Proyecto React + Express
     Requisitos
-        - Node.js 18+
+        - Node.js 22.19
         - npm
 <ol>
 <li> Clonar este repositorio.</li>
@@ -86,7 +112,6 @@ contratado a ustedes para construir su primera plataforma de e-commerce.</p>
 </ol>
 
 ## Capturas
-
 <img width="1332" height="652" alt="Screenshot 2025-09-07 221232" src="https://github.com/user-attachments/assets/52b4d8f6-ade8-458e-91d9-75cc66d740be" />
 <img width="1325" height="639" alt="Screenshot 2025-09-07 221244" src="https://github.com/user-attachments/assets/f832d9f5-e894-4a1b-8dd5-3a75fe4e2017" />
 <img width="1331" height="644" alt="Screenshot 2025-09-07 221253" src="https://github.com/user-attachments/assets/2ca77cee-0fa4-493f-a938-215e8e1f1f43" />

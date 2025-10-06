@@ -1,7 +1,7 @@
 import './BodyCarrito.css';
 import ProductCard from './ProductCard';
 
-function CarritoBody({productos, carrito, agregarAlCarrito, verDetalleProducto}) {
+function CarritoBody({productos, carrito, verDetalleProducto}) {
 	const productosEnCarrito = productos.filter(p => carrito.includes(p.id));
     return (<>
     	<main className="contenido">
@@ -13,7 +13,6 @@ function CarritoBody({productos, carrito, agregarAlCarrito, verDetalleProducto})
 					{productosEnCarrito.map(producto => (
 						<ProductCard  
 							verDetalleProducto={verDetalleProducto}
-							agregarAlCarrito={agregarAlCarrito}
 							id={producto.id}
 							nombre={producto.nombre}
 							precio={producto.precio}

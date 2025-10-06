@@ -28,27 +28,24 @@ function App() {
           productos ={() => setVistaActual('productos')}
           contactos ={() => setVistaActual('contacto')}
           carrito ={() => setVistaActual('carrito')}
-          contadorCarrito={carrito.length}
-          carritoCuenta ={() => setVistaActual('contacto')}
+          contadorCuenta={carrito.length}
         />
 
       {vistaActual === 'inicio' && <IndexBody
                                       productos={productos}
-                                      agregarAlCarrito={agregarAlCarrito} 
                                       verDetalleProducto={verDetalleProducto}/>}
       {vistaActual === 'productos' && <ProductosBody 
                                       productos={productos}
-                                      agregarAlCarrito={agregarAlCarrito} 
                                       verDetalleProducto={verDetalleProducto}/>}
       {vistaActual === 'carrito' && <CarritoBody 
                                       carrito={carrito} 
-                                      agregarAlCarrito={agregarAlCarrito}
                                       verDetalleProducto={verDetalleProducto}
                                       productos={productos} />}
       {vistaActual === 'contacto' && <ContactForm />}
       {vistaActual === 'producto' && ( <ProductoIndividualBody
                                       producto={productos.find(p => 
-                                      p.id === productoSeleccionadoId)}/>)}
+                                      p.id === productoSeleccionadoId)}
+                                      agregarAlCarrito={agregarAlCarrito} />)}
         <Footer 
           inicio={() =>  setVistaActual('inicio')}
           productos ={() => setVistaActual('productos')}

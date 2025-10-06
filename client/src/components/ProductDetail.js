@@ -1,5 +1,5 @@
 import './ProductDetail.css';
-function ProductoDetail({ producto }) {
+function ProductoDetail({agregarAlCarrito,  producto }) {
 	if (!producto) return <p>Producto no encontrado</p>;
     return (<>
 
@@ -23,6 +23,11 @@ function ProductoDetail({ producto }) {
                             <li><strong>Peso:</strong> {producto.peso}</li>
                         </ul>
 				    </div>
+                     <button className="btn" onClick={() => {agregarAlCarrito(producto.id);
+                                              alert(`El producto "${producto.nombre}" se agregó al carrito`);}}
+                        type="button" data-id={producto.id}>
+                    Agregar al Carrito
+                    </button>
 			    </div>
 		</main>
     </>);

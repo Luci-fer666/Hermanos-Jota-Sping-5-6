@@ -1,6 +1,6 @@
 import './BodyIndex.css';
 import ProductCard from './ProductCard';
-function indexBody( { productos, agregarAlCarrito, verDetalleProducto}) {
+function indexBody( { productos, verDetalleProducto}) {
     let random1 = Math.floor(Math.random() * 11);
     let random2 = Math.floor(Math.random() * 11);
     let random3 = Math.floor(Math.random() * 11);
@@ -17,7 +17,6 @@ function indexBody( { productos, agregarAlCarrito, verDetalleProducto}) {
                                 <ul id="destacados" className="product-grid" aria-live="polite">
                                     <ProductCard 
                                         verDetalleProducto={verDetalleProducto}
-                                        agregarAlCarrito={agregarAlCarrito}
                                         id={productos[random1].id}
                                         nombre={productos[random1].nombre}
                                         precio={productos[random1].precio}
@@ -26,7 +25,6 @@ function indexBody( { productos, agregarAlCarrito, verDetalleProducto}) {
                                         />
                                     <ProductCard 
                                         verDetalleProducto={verDetalleProducto}
-                                        agregarAlCarrito={agregarAlCarrito}
                                         id={productos[random2].id}
                                         nombre={productos[random2].nombre}
                                         precio={productos[random2].precio}
@@ -35,7 +33,6 @@ function indexBody( { productos, agregarAlCarrito, verDetalleProducto}) {
                                         />
                                     <ProductCard 
                                         verDetalleProducto={verDetalleProducto}
-                                        agregarAlCarrito={agregarAlCarrito}
                                         id={productos[random3].id}
                                         nombre={productos[random3].nombre}
                                         precio={productos[random3].precio}

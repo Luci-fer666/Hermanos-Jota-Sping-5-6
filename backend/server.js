@@ -8,8 +8,8 @@ app.use(express.json());
 // Routers
 const userRoutes = require('./Routes/userRoutes');
 const productRoutes = require('./Routes/productRoutes');
-app.use('/api/users', userRoutes);
-app.use('/api/products', productRoutes);
+app.use('/users', userRoutes);
+app.use('/products', productRoutes);
 
 // Logger de Peticiones
 const logger = require('./logger.js');

@@ -1,7 +1,6 @@
 const express = require('express');
 const usersRouter = express.Router();
- 
-const users = [{ id: 1, name: 'Ana' }, { id: 2, name: 'Luis' }];
+const users = require('../usuarios');
  
 usersRouter.get('/', (req, res) => {
   res.json(users);
