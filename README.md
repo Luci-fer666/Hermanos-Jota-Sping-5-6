@@ -61,24 +61,29 @@ contratado a ustedes para construir su primera plataforma de e-commerce.</p>
     Requisitos
         - Node.js 18+
         - npm
-1. Clonar este repositorio.
-2. Instalar 
+<ol>
+<li> Clonar este repositorio.</li>
+<li> Instalar 
     En la terminal:
-        Frontend
+        <ul>
+        <li>Frontend:
             - cd client
-            - npm install
-        Backend
+            - npm install</li>
+        <li>Backend:
             - cd backend
-            - npm install
-3. Ejecutar 
+            - npm install</li></li>
+        </ul>
+<li> Ejecutar 
     En la terminal:
-        Frontend
+        <ul>
+        <li>Frontend:
             - cd client
-            - npm start
-        Backend
+            - npm start</li>
+        <li>Backend:
             - cd backend
-            - npm start 
-
+            - npm start</li></li>
+        </ul>
+</ol>
 
 ## Capturas
 
