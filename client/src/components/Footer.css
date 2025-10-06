@@ -1,4 +1,5 @@
 .site-footer {
+  align-content: bottom;
   background-color: #87A96B;
   width: 100%; /* fuerza el ancho completo de la ventana */
   margin: 0;     /* elimina márgenes que puedan achicarlo */

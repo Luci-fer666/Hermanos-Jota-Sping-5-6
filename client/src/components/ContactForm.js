@@ -29,30 +29,25 @@ function ContactForm() {
           <div className="contacto-info">
             <h2>Información de contacto</h2>
             <p>
-              <i className="fas fa-map-marker-alt"></i>
               <b>Av. San Juan 2847, C1232AAB — San Cristóbal</b>, CABA, Argentina
             </p>
 
             <p>
-              <i className="fab fa-instagram"></i>
               <a href="https://alt-5a31a0302d72d.blackboard.com/bbcswebdav/pid-982156-dt-content-rid-14612411_1/courses/FSD.00-43441/Instagram%20copy/index.html?one_hash=0F722C37711BD6305A77E4FFDCE89EB4&f_hash=15268A94162158099670952E71AA8CBC" target="_blank" rel="noreferrer">
                 <b>@hermanosjota_ba</b>
               </a>
             </p>
 
             <p>
-              <i className="fa-brands fa-whatsapp"></i>
               <a href="tel:+541145678900">+54 11 4567-8900</a>
             </p>
 
             <p>
-              <i className="fa-solid fa-envelope"></i>
               Email general:
               <a href="mailto:info@hermanosjota.com.ar"><b>info@hermanosjota.com.ar</b></a>
             </p>
 
             <p>
-              <i className="fa-solid fa-envelope"></i>
               Email ventas:
               <a href="mailto:ventas@hermanosjota.com.ar"><b>ventas@hermanosjota.com.ar</b></a>
             </p>

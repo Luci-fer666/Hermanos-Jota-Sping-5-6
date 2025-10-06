@@ -1,6 +1,6 @@
 import './BodyIndex.css';
 import ProductCard from './ProductCard';
-function indexBody( { productos, agregarAlCarrito }) {
+function indexBody( { productos, agregarAlCarrito, verDetalleProducto}) {
     let random1 = Math.floor(Math.random() * 11);
     let random2 = Math.floor(Math.random() * 11);
     let random3 = Math.floor(Math.random() * 11);
@@ -16,6 +16,7 @@ function indexBody( { productos, agregarAlCarrito }) {
                                 <h2>Producto destacado de la Semana</h2>
                                 <ul id="destacados" className="product-grid" aria-live="polite">
                                     <ProductCard 
+                                        verDetalleProducto={verDetalleProducto}
                                         agregarAlCarrito={agregarAlCarrito}
                                         id={productos[random1].id}
                                         nombre={productos[random1].nombre}
@@ -24,6 +25,7 @@ function indexBody( { productos, agregarAlCarrito }) {
                                         imagen={productos[random1].imagen}
                                         />
                                     <ProductCard 
+                                        verDetalleProducto={verDetalleProducto}
                                         agregarAlCarrito={agregarAlCarrito}
                                         id={productos[random2].id}
                                         nombre={productos[random2].nombre}
@@ -32,6 +34,7 @@ function indexBody( { productos, agregarAlCarrito }) {
                                         imagen={productos[random2].imagen}
                                         />
                                     <ProductCard 
+                                        verDetalleProducto={verDetalleProducto}
                                         agregarAlCarrito={agregarAlCarrito}
                                         id={productos[random3].id}
                                         nombre={productos[random3].nombre}
@@ -53,14 +56,13 @@ function indexBody( { productos, agregarAlCarrito }) {
                             </section>
                             <section> 
                                 <div>
-                                    <p className="Multimedia">
+                                    <div className="Multimedia">
                                         <video id="video" controls autoplay>
-                                            <source src="/assets/img/logo.svg" type="video/mp4"/>
-                                            <source src="movie.ogg" type="video/ogg"/>
+                                            <source src="/assets/docs/Video institucional Hermanos Jota.mp4" type="video/mp4"/>
                                             <img src="/assets/img/logo.svg" alt="Video no soportado"/>
                                             Tu navegador no soporta el video mostrado
                                         </video>
-                                    </p>
+                                    </div>
                                 </div>
                             </section>                           
                         </article>   

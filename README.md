@@ -2,7 +2,7 @@
 
 # Mueblería Hermanos Jota — Sprint 3 y 4
 
-Sitio web estático con HTML, CSS y JavaScript que simula un e-commerce de muebles.  
+Sitio web dinamico con HTML, CSS y JavaScript utilizando tecnologias React y ExpressJS con NodeJS que simula un e-commerce de muebles.  
 Incluye páginas de inicio, catálogo de productos, detalle de producto y formulario de contacto con validaciones.
 
 <div><b>Programadores: </b>
@@ -17,12 +17,12 @@ Incluye páginas de inicio, catálogo de productos, detalle de producto y formul
 
 <h2>Proyecto e-commerce para la Mueblería Hermanos Jota.</h2>
 <p align="center">
-  <img src="assets/img/logo.svg" height="100">
+  <img src="client/public/assets/img/logo.svg" height="100">
 </p>
 <h3> Contexto de Negocio: El Desafío de "Mueblería Hermanos Jota"
      <h4>La Historia</h4>
 <p align="center">
-    <img src="assets/img/Escritorio Costa.png" height="100">
+    <img src="client/public/assets/img/Escritorio Costa.png" height="100">
 </p>    
 <p>La Mueblería Hermanos Jota es un taller familiar con más de 30 años de tradición en el diseño y la
 fabricación de muebles de madera de autor. Son conocidos en su ciudad por la alta calidad
@@ -31,7 +31,7 @@ moderno. Hasta ahora, su negocio ha dependido exclusivamente de su tienda físic
 de sus clientes leales.<p>
     <h4>El Desafío: Conquistar el Mundo Digital</h4>
 <p align="center">
-    <img src="assets/img/Mesa Comedor Pampa.png" height="100">
+    <img src="client/public/assets/img/Mesa Comedor Pampa.png" height="100">
 </p>   
 <p>Los dueños, la familia Jota, han notado un cambio en el mercado. Su clientela tradicional
 se mantiene, pero les cuesta mucho atraer a un público más joven y expandir su alcance
@@ -50,9 +50,9 @@ contratado a ustedes para construir su primera plataforma de e-commerce.</p>
 
 - ## Funcionalidades
 - Página de inicio con productos destacados.
-- Catálogo (`productos.html`) generado dinámicamente desde un array de objetos.
-- Detalle de producto (`producto.html`) identificado por parámetro `?id=`.
-- Carrito con contador persistente en `localStorage`.
+- Catálogo generado dinámicamente desde un array de objetos.
+- Detalle de producto identificado por parámetro `?id=`. (AUN NO IMPLEMENTADO)
+- Carrito con contador persistente en `localStorage`. 
 - Formulario de contacto con validación en cliente.
 - Diseño responsive con Flexbox y Grid.
 
@@ -62,3 +62,7 @@ contratado a ustedes para construir su primera plataforma de e-commerce.</p>
    
 ## Capturas
 
+
+<img width="1332" height="652" alt="Screenshot 2025-09-07 221232" src="https://github.com/user-attachments/assets/52b4d8f6-ade8-458e-91d9-75cc66d740be" />
+<img width="1325" height="639" alt="Screenshot 2025-09-07 221244" src="https://github.com/user-attachments/assets/f832d9f5-e894-4a1b-8dd5-3a75fe4e2017" />
+<img width="1331" height="644" alt="Screenshot 2025-09-07 221253" src="https://github.com/user-attachments/assets/2ca77cee-0fa4-493f-a938-215e8e1f1f43" />

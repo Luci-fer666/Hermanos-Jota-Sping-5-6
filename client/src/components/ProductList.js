@@ -1,11 +1,12 @@
 import './ProductList.css';
 import ProductCard from './ProductCard.js';
 
-function ProductList({productos, agregarAlCarrito}) {
+function ProductList({productos, agregarAlCarrito, verDetalleProducto}) {
     return (<>
         <ul id="lista-productos" className="product-grid" aria-live="polite">
           {productos.map(producto => (
-            <ProductCard  
+            <ProductCard 
+                verDetalleProducto={verDetalleProducto} 
                 agregarAlCarrito={agregarAlCarrito}
                 id={producto.id}
                 nombre={producto.nombre}

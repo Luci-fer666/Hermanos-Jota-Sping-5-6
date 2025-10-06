@@ -1,7 +1,7 @@
 import './BodyCarrito.css';
 import ProductCard from './ProductCard';
 
-function CarritoBody({productos, carrito, agregarAlCarrito}) {
+function CarritoBody({productos, carrito, agregarAlCarrito, verDetalleProducto}) {
 	const productosEnCarrito = productos.filter(p => carrito.includes(p.id));
     return (<>
     	<main className="contenido">
@@ -12,6 +12,7 @@ function CarritoBody({productos, carrito, agregarAlCarrito}) {
 					<ul id="carrito-lista" className="carrito-grid" aria-live="polite">
 					{productosEnCarrito.map(producto => (
 						<ProductCard  
+							verDetalleProducto={verDetalleProducto}
 							agregarAlCarrito={agregarAlCarrito}
 							id={producto.id}
 							nombre={producto.nombre}
@@ -28,7 +29,7 @@ function CarritoBody({productos, carrito, agregarAlCarrito}) {
 								{productosEnCarrito.reduce((total, p) => total + p.precio, 0)}
 							</span></strong>
 						</p>
-						<button id="vaciar-carrito" className="btn danger">Vaciar carrito</button>
+						<button id="vaciar-carrito" className="btncar">Vaciar carrito</button>
 					</div>
 				</section>
 			</div>

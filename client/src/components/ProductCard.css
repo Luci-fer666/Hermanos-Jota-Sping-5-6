@@ -5,7 +5,6 @@
   max-width: auto ;
   max-height: auto;
   margin: 5px;
-
 }
 .producto-item li {
   background-color: #F5E6D3;
@@ -52,15 +51,6 @@
 }
 .btn[disabled] { opacity: .6; cursor: not-allowed; }
 .btn {
-  flex: 1;
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: 1px solid #F5E6D3;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 600;
-}
-.btn {
   display: block;
   background: #0f172a;
   color: #fff;
@@ -68,7 +58,23 @@
   align-self: center;
   margin: 30px;  /* ---Centra el boton--- */
   padding: 10px;
+  border-radius: 8px;
 }
 .btn:hover {
-  background: #1e293b;
+  background: #3d5274;
+}
+.btn.ghost {
+  background: #fff;
+  color: #0f172a;
+}
+.btn.ghost:hover {
+  background: #f1f5f9;
+}
+#nombre {
+  cursor: pointer;
+}
+#nombre:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #1e293b;
 }
