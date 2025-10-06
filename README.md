@@ -57,11 +57,30 @@ contratado a ustedes para construir su primera plataforma de e-commerce.</p>
 - Diseño responsive con Flexbox y Grid.
 
 ## Cómo ejecutar
+ Proyecto React + Express
+    Requisitos
+        - Node.js 18+
+        - npm
 1. Clonar este repositorio.
-2. ...
-   
-## Capturas
+2. Instalar 
+    En la terminal:
+        Frontend
+            - cd client
+            - npm install
+        Backend
+            - cd backend
+            - npm install
+3. Ejecutar 
+    En la terminal:
+        Frontend
+            - cd client
+            - npm start
+        Backend
+            - cd backend
+            - npm start 
 
+
+## Capturas
 
 <img width="1332" height="652" alt="Screenshot 2025-09-07 221232" src="https://github.com/user-attachments/assets/52b4d8f6-ade8-458e-91d9-75cc66d740be" />
 <img width="1325" height="639" alt="Screenshot 2025-09-07 221244" src="https://github.com/user-attachments/assets/f832d9f5-e894-4a1b-8dd5-3a75fe4e2017" />
