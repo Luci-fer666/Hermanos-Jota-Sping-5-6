@@ -1,7 +1,7 @@
 <h1>Repositorio del grupo 14</h1>
 
-# Mueblería Hermanos Jota — Sprint 3 y 4
-Sitio web dinamico con HTML, CSS y JavaScript utilizando tecnologias React y ExpressJS con NodeJS que simula un e-commerce de muebles.  
+# Mueblería Hermanos Jota — Sprint 5 y 6
+ Sitio web dinamico con HTML, CSS y JavaScript utilizando tecnologias React y ExpressJS con NodeJS. Incluyendo funcionalidades de React Router, Fetch para la conexion con la APi y además de implementación de una base de datos externa en MongoDB y Mongosee
 Incluye páginas de inicio, catálogo de productos, detalle de producto y formulario de contacto con validaciones.
 
 <div><b>Programadores: </b>
@@ -43,8 +43,11 @@ contratado a ustedes para construir su primera plataforma de e-commerce.</p>
 - CSS3 (Flexbox, Grid, responsive)
 - JavaScript (ES6, manipulación del DOM, localStorage)
 - React
+- React Router
 - ExpressJS
 - NodeJS
+- MongoDB
+- Mongosee
 - GitHub Pages para el deploy
 
 ## Funcionalidades

@@ -2,42 +2,40 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-//El Traductor de JSON
+// Middleware global para parsear JSON
 app.use(express.json());
+
+// Logger de peticiones
+const logger = require('./logger');
+app.use(logger);
 
 // Routers
 const userRoutes = require('./Routes/userRoutes');
 const productRoutes = require('./Routes/productRoutes');
+
 app.use('/users', userRoutes);
 app.use('/products', productRoutes);
 
-// Logger de Peticiones
-const logger = require('./logger.js');
-app.use(logger);
-
-//Ruta de Inicio
+// Ruta raíz solo para checkear que el servidor está vivo
 app.get('/', (req, res) => {
-  res.send('"¡Bienvenido al servidor de Mueblería Jota!"');
+  res.json({ message: '¡Bienvenido al servidor de Mueblería Jota!' });
 });
 
-// Middleware para Rutas No Encontradas (404)
+// Middleware para rutas no encontradas (404)
 app.use((req, res, next) => {
-  const error = new Error(`Ruta no encontrada: ${req.originalUrl}`);
-  error.status = 404;
-  next(error); 
+  res.status(404).json({ message: `Ruta no encontrada: ${req.originalUrl}` });
 });
 
-//
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo exitosamente en http://localhost:${PORT}`);
-});
-
-//Manejador de Errores Centralizado
+// Middleware de manejo de errores
 app.use((err, req, res, next) => {
-  const statusCode = err.status || 500;
   console.error(err.message, err.stack);
-  res.status(statusCode).json({
+  res.status(err.status || 500).json({
     message: err.message || 'Ha ocurrido un error en el servidor.',
     stack: process.env.NODE_ENV === 'production' ? '🥞' : err.stack,
   });
+});
+
+// Levantar servidor
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });

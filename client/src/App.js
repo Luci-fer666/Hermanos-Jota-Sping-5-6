@@ -9,6 +9,7 @@ import IndexBody from './components/BodyIndex.js';
 import React, { useState } from 'react';
 
 
+
 function App() {
       const [vistaActual, setVistaActual] = useState('inicio');
       const [productoSeleccionadoId, setProductoSeleccionadoId] = useState(null);
@@ -43,8 +44,7 @@ function App() {
                                       productos={productos} />}
       {vistaActual === 'contacto' && <ContactForm />}
       {vistaActual === 'producto' && ( <ProductoIndividualBody
-                                      producto={productos.find(p => 
-                                      p.id === productoSeleccionadoId)}
+                                      id= {productoSeleccionadoId}
                                       agregarAlCarrito={agregarAlCarrito} />)}
         <Footer 
           inicio={() =>  setVistaActual('inicio')}

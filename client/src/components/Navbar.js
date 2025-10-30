@@ -1,4 +1,5 @@
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 function Navbar({inicio, productos, contactos, carrito, contadorCuenta}) {
     return (
@@ -11,12 +12,12 @@ function Navbar({inicio, productos, contactos, carrito, contadorCuenta}) {
     	    </div>
 
     	    <nav className="site-nav" aria-label="Principal">
-		    	<a href="#!" onClick={(e) => { e.preventDefault(); inicio(); }}>Inicio</a>
-		    	<a href="#!" onClick={(e) => { e.preventDefault(); productos(); }}>Productos</a>
-		    	<a href="#!" onClick={(e) => { e.preventDefault(); contactos(); }}>Contacto</a>
-		    	<a href="#!" onClick={(e) => { e.preventDefault(); carrito(); }}>
+		    	<Link to="#!" onClick={(e) => { e.preventDefault(); inicio(); }}>Inicio</Link>
+		    	<Link to="#!" onClick={(e) => { e.preventDefault(); productos(); }}>Productos</Link>
+		    	<Link to="#!" onClick={(e) => { e.preventDefault(); contactos(); }}>Contacto</Link>
+		    	<Link to="#!" onClick={(e) => { e.preventDefault(); carrito(); }}>
                     Carrito <span id="cart-count" aria-live="polite">{contadorCuenta}</span>
-                </a>
+                </Link>
             </nav> 
 
 			<form className="search" action="#" method="get" role="search">

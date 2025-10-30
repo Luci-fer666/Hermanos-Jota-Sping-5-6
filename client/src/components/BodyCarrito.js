@@ -1,7 +1,34 @@
 import './BodyCarrito.css';
 import ProductCard from './ProductCard';
+import React, { useState, useEffect } from 'react';
 
-function CarritoBody({productos, carrito, verDetalleProducto}) {
+function CarritoBody({carrito, verDetalleProducto}) {
+  const [productos, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+	const fetchProducts = async () => {
+	  try {
+		const response = await fetch('/products');
+		if (!response.ok) {
+		  throw new Error('La respuesta de la red no fue satisfactoria');
+		}
+		const data = await response.json();
+		console.log("Productos recibidos:", data);
+		setProducts(data);
+	  } catch (err) {
+		console.error("Error fetching productos:", err);
+		setError(err);
+	  } finally {
+		setLoading(false);
+	  } };
+	fetchProducts(); }, []);
+  if (loading) {
+	return <p>Cargando productos...</p>; }
+  if (error) {
+	return <p>Error al cargar los datos: {error.message}</p>; }
+
 	const productosEnCarrito = productos.filter(p => carrito.includes(p.id));
     return (<>
     	<main className="contenido">

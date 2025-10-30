@@ -1,9 +1,39 @@
 import './BodyIndex.css';
 import ProductCard from './ProductCard';
-function indexBody( { productos, verDetalleProducto}) {
+import React, { useState, useEffect } from 'react';
+
+function IndexBody( {verDetalleProducto}) {
+  const [productos, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('/products');
+        if (!response.ok) {
+          throw new Error('La respuesta de la red no fue satisfactoria');
+        }
+        const data = await response.json();
+        console.log("Productos recibidos:", data);
+        setProducts(data);
+      } catch (err) {
+        console.error("Error fetching productos:", err);
+        setError(err);
+      } finally {
+        setLoading(false);
+      } };
+    fetchProducts(); }, []);
+  if (loading) {
+    return <p>Cargando productos...</p>; }
+  if (error) {
+    return <p>Error al cargar los datos: {error.message}</p>; }
+
+
     let random1 = Math.floor(Math.random() * 11);
     let random2 = Math.floor(Math.random() * 11);
     let random3 = Math.floor(Math.random() * 11);
+
     return (<>
             <div className="productos">
                 <div className="background-main">
@@ -67,4 +97,4 @@ function indexBody( { productos, verDetalleProducto}) {
                 </div>
             </div>
             </>); }
-export default indexBody;
+export default IndexBody;

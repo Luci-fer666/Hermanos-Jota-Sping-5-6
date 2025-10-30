@@ -1,21 +1,27 @@
 const express = require('express');
-const usersRouter = express.Router();
+const router = express.Router();
 const users = require('../usuarios');
- 
-usersRouter.get('/', (req, res) => {
+
+// GET /users → devuelve todos los usuarios
+router.get('/', (req, res) => {
   res.json(users);
 });
- 
-usersRouter.get('/:id', (req, res) => {
-  const user = users.find(u => u.id === parseInt(req.params.id));
+
+// GET /users/:id → devuelve un usuario por ID
+router.get('/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+  const user = users.find(u => u.id === id);
+
   if (!user) {
     return res.status(404).json({ message: 'Usuario no encontrado' });
   }
+
   res.json(user);
 });
 
-usersRouter.post('/', (req, res) => {
-    res.status(201).json({ message: 'Usuario creado' });
+// POST /users → crear usuario (simulado)
+router.post('/', (req, res) => {
+  res.status(201).json({ message: 'Usuario creado' });
 });
- 
-module.exports = usersRouter;
+
+module.exports = router;
