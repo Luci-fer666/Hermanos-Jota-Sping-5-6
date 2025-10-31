@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 4000;
 const { notFound, errorHandlerServer } = require('./middleware/errorHandlers');
+const Product = require('./DB/models/Product');
 
 // Middleware global para parsear JSON
 app.use(express.json());
@@ -52,6 +53,67 @@ app.get('/api/productos/:id', async (req, res, next) => {
     next(error);
   }
 })
+
+// END POINT 3: Crear nuevo producto
+app.post('/api/productos', async (req, res, next) => {
+  try {
+    const nuevoProducto = new Product(req.body);
+    const productoGuardado = await nuevoProducto.save();
+    res.status(201).json({message: 'Producto creado', producto: productoGuardado});
+  } catch (error) {
+    error.status = 400;
+    next(error);
+  }
+});
+
+// END POINT 4: Actualizar datos de un producto por su id
+app.put('/api/productos/:id', async (req, res, next) => {
+  try {
+    const productoId = req.params.id;
+    const datosActualizados = req.body;
+
+    const productoActualizado = await Product.findByIdAndUpdate(usuarioID, datosActualizados, {new: true, runValidators: true});
+
+    // si no encuentra el producto, no se actualiza
+    if (!productoActualizado) {
+      const error = new Error('Producto no encontrado para actualizar');
+      error.status = 404;
+      return next(error);
+    }
+
+    res.status(200).json({
+      message: 'Producto actualizado con exito!',
+      producto: productoActualizado
+    });
+  } catch (error) {
+    console.error('Error al actualizar producto: ', error.message);
+    error.status = 400;
+    next(error);
+  }
+});
+
+// END POINT 5: Borrar producto por su ID
+app.delete(('/api/productos/:id'), async (req, res, next) => {
+  try {
+    const productoId = req.params.id;
+    const productoEliminado = await Product.findByIdAndDelete(productoId);
+
+    if (!productoEliminado) {
+      const error = new Error('No se encontró el producto a eliminar.');
+      error.status(404);
+      return next(error);
+    }
+
+    res.status(200).json({
+      message: 'Producto eliminado con exito!',
+      producto: productoEliminado
+    });
+  } catch (error) {
+    console.error('Error al eliminar producto.');
+    error.status = 400;
+    next(error);
+  }
+});
 
 // -----------------
 // MANEJO DE ERRORES
