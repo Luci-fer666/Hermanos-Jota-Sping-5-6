@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
@@ -5,11 +6,7 @@ const Producto = require('./DB/models/Product');
 const { notFound, errorHandlerServer } = require('./middleware/errorHandlers');
 const PORT = process.env.PORT || 4000;
 
-// Link de acceso a la base de datos
-// mongodb+srv://equipo14:equipo14@muebleria-hnos-jota-spr.cwynlzs.mongodb.net/?appName=Muebleria-Hnos-Jota-Sprint-5-6
-// Usuario: equipo14
-// Password: equipo14
-const DB_URL = 'mongodb+srv://equipo14:equipo14@muebleria-hnos-jota-spr.cwynlzs.mongodb.net/?appName=Muebleria-Hnos-Jota-Sprint-5-6';
+const DB_URL = process.env.MONGO_URL;
 
 mongoose.connect(DB_URL).then(() => console.log('Conexión exitosa a MongoDB Atlas :)')).catch(err => console.error('Error al conectarse a MongoDB Atlas: ', err));
 
