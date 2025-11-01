@@ -1,14 +1,16 @@
 import './Footer.css';
-function Footer({inicio, productos, contactos}) {
+import { Link } from 'react-router-dom'
+
+function Footer() {
     return(
         <footer className="site-footer">
             <div className="footer-container">
                 <div className="footer-section">
                     <h3>Enlaces</h3>
                     <ul>
-                        <li><a href="#!" onClick={(e) => { e.preventDefault(); inicio(); }}>Inicio</a></li>
-                        <li><a href="#!" onClick={(e) => { e.preventDefault(); productos(); }}>Productos</a></li>
-                        <li><a href="#!" onClick={(e) => { e.preventDefault(); contactos(); }}>Contacto</a></li>
+                        <li><Link to="/">Inicio</Link></li>
+                        <li><Link to="/productos">Productos</Link></li>
+                        <li><Link to="/contacto">Contacto</Link></li>
                     </ul>
                 </div>
 

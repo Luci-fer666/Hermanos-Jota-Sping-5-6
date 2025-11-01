@@ -1,39 +1,6 @@
 import './BodyIndex.css';
-import ProductCard from './ProductCard';
-import React, { useState, useEffect } from 'react';
 
-function IndexBody( {verDetalleProducto}) {
-  const [productos, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch('/products');
-        if (!response.ok) {
-          throw new Error('La respuesta de la red no fue satisfactoria');
-        }
-        const data = await response.json();
-        console.log("Productos recibidos:", data);
-        setProducts(data);
-      } catch (err) {
-        console.error("Error fetching productos:", err);
-        setError(err);
-      } finally {
-        setLoading(false);
-      } };
-    fetchProducts(); }, []);
-  if (loading) {
-    return <p>Cargando productos...</p>; }
-  if (error) {
-    return <p>Error al cargar los datos: {error.message}</p>; }
-
-
-    let random1 = Math.floor(Math.random() * 11);
-    let random2 = Math.floor(Math.random() * 11);
-    let random3 = Math.floor(Math.random() * 11);
-
+function IndexBody() {
     return (<>
             <div className="productos">
                 <div className="background-main">
@@ -41,35 +8,6 @@ function IndexBody( {verDetalleProducto}) {
                         <article>
                             <section>
                                 <h2 id="bienvenida">Bienvenidos a Mueblería Hermanos Jota</h2>
-                            </section>
-                            <section className="destacados">
-                                <h2>Producto destacado de la Semana</h2>
-                                <ul id="destacados" className="product-grid" aria-live="polite">
-                                    <ProductCard 
-                                        verDetalleProducto={verDetalleProducto}
-                                        id={productos[random1].id}
-                                        nombre={productos[random1].nombre}
-                                        precio={productos[random1].precio}
-                                        descripcion={productos[random1].descripcion}
-                                        imagen={productos[random1].imagen}
-                                        />
-                                    <ProductCard 
-                                        verDetalleProducto={verDetalleProducto}
-                                        id={productos[random2].id}
-                                        nombre={productos[random2].nombre}
-                                        precio={productos[random2].precio}
-                                        descripcion={productos[random2].descripcion}
-                                        imagen={productos[random2].imagen}
-                                        />
-                                    <ProductCard 
-                                        verDetalleProducto={verDetalleProducto}
-                                        id={productos[random3].id}
-                                        nombre={productos[random3].nombre}
-                                        precio={productos[random3].precio}
-                                        descripcion={productos[random3].descripcion}
-                                        imagen={productos[random3].imagen}
-                                        />
-                                </ul>
                             </section>
                             <section>
                                 <div className="historia">

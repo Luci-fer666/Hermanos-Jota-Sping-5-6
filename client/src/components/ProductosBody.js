@@ -1,13 +1,11 @@
 import './ProductosBody.css';
 import ProductList from './ProductList.js';
 
-function ProductosBody({verDetalleProducto}) {
+function ProductosBody() {
     return (<>
 		<div className="background-main">
 			<div className="catalogo" id="contenido">
-                <ProductList  
-					verDetalleProducto={verDetalleProducto}
-					/>
+                <ProductList/>
 			</div>
 		</div>
     </>);

@@ -1,22 +1,34 @@
 const express = require('express');
 const router = express.Router();
 const productos = require('../productos');
+const Producto = require('../DB/models/Product');
 
 // GET /products → devuelve todos los productos
-router.get('/', (req, res) => {
-  res.json(productos);
+router.get('/', async (req, res) => {
+  try {
+    const todosLosProductos = await Producto.find({});
+    res.json(todosLosProductos);
+  } catch (error) {
+    console.error("Error al buscar todos los productos: ", error.message);
+    res.status(500).json({ message: 'Error interno del servidor', error: error.message });
+  }
 });
 
 // GET /products/:id → devuelve un producto por ID
-router.get('/:id', (req, res) => {
-  const id = parseInt(req.params.id);
-  const producto = productos.find(p => p.id === id);
+router.get('/:id', async (req, res) => {
+  try {
+    const id = req.params.id;
+    const productoEncontrado = await Producto.findById(id);
 
-  if (!producto) {
-    return res.status(404).json({ message: 'Producto no encontrado' });
-  }
+    if (!productoEncontrado) {
+      return res.status(404).json({ message: 'Producto no encontrado' });
+    }
 
-  res.json(producto);
+    res.json(productoEncontrado);
+    } catch (error) {
+      console.error("Error al buscar producto por su ID: ", error.message);
+      res.status(500).json({ message: 'Error interno del servidor', error: error.message });
+    }
 });
 
 module.exports = router;
