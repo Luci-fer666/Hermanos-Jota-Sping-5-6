@@ -6,10 +6,10 @@ const { notFound, errorHandlerServer } = require('./middleware/errorHandlers');
 const PORT = process.env.PORT || 4000;
 
 // Link de acceso a la base de datos
-// mongodb+srv://lolafioramantiuni_db_user:iSqZGU3RiPvHJlJd@muebleria-hnos-jota-spr.cwynlzs.mongodb.net/?appName=Muebleria-Hnos-Jota-Sprint-5-6
-// Usuario: lolafioramantiuni_db_user
-// Password: iSqZGU3RiPvHJlJd
-const DB_URL = 'mongodb+srv://lolafioramantiuni_db_user:iSqZGU3RiPvHJlJd@muebleria-hnos-jota-spr.cwynlzs.mongodb.net/?appName=Muebleria-Hnos-Jota-Sprint-5-6';
+// mongodb+srv://equipo14:equipo14@muebleria-hnos-jota-spr.cwynlzs.mongodb.net/?appName=Muebleria-Hnos-Jota-Sprint-5-6
+// Usuario: equipo14
+// Password: equipo14
+const DB_URL = 'mongodb+srv://equipo14:equipo14@muebleria-hnos-jota-spr.cwynlzs.mongodb.net/?appName=Muebleria-Hnos-Jota-Sprint-5-6';
 
 mongoose.connect(DB_URL).then(() => console.log('Conexión exitosa a MongoDB Atlas :)')).catch(err => console.error('Error al conectarse a MongoDB Atlas: ', err));
 
