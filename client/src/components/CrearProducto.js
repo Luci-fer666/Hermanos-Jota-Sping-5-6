@@ -36,7 +36,7 @@ function CrearProducto() {
         throw new Error('La creacion falló.');
       }
       const result = await response.json();
-      alert(`¡Creacion exitosa para ${result.nombre}`);
+      alert(`¡Creacion exitosa para ${formData.nombre}`);
       
       setFormData({ nombre: '', descripcion: '', precio: '', imagenUrl: ''});
       //navigate(`/producto/${result._id}`);
