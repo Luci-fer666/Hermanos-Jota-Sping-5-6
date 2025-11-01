@@ -9,7 +9,7 @@ const productos = [
     "acabado": "Aceite natural ecológico",
     "capacidad": "6 compartimentos interiores",
     "peso": "60 kg",
-    "imagen": "assets/img/Aparador Uspallata.png"
+    "imagen": "http://imgfz.com/i/v1OgCQ8.png"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@ const productos = [
     "acabado": "Laca mate ecológica",
     "capacidad": "45 kg por estante",
     "modulares": "5 estantes ajustables",
-    "imagen": "assets/img/Biblioteca Recoleta.png"
+    "imagen": "http://imgfz.com/i/7nkM9bF.png"
   },
   {
     "id": 3,
@@ -33,7 +33,7 @@ const productos = [
     "acabado": "Cera vegetal, tapizado premium",
     "tapizado": "Repelente al agua y manchas",
     "confort": "Espuma alta densidad",
-    "imagen": "assets/img/Butaca Mendoza.png"
+    "imagen": "http://imgfz.com/i/kirnTm1.png"
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@ const productos = [
     "acabado": "Cuero anilina premium",
     "rotacion": "360° silenciosa y suave",
     "garantia": "10 años en estructura",
-    "imagen": "assets/img/Sillón Copacabana.png"
+    "imagen": "http://imgfz.com/i/FLGcNrV.png"
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@ const productos = [
     "acabado": "Mármol pulido, aceite natural en madera",
     "peso": "42 kg",
     "cargaMaxima": "25 kg distribuidos",
-    "imagen": "assets/img/Mesa de Centro Araucaria.png"
+    "imagen": "http://imgfz.com/i/WNjSqHJ.png"
   },
   {
     "id": 6,
@@ -69,7 +69,7 @@ const productos = [
     "acabado": "Barniz mate de poliuretano",
     "almacenamiento": "1 cajón + repisa inferior",
     "caracteristicas": "Cajón con cierre suave",
-    "imagen": "assets/img/Mesa de Noche Aconcagua.png"
+    "imagen": "http://imgfz.com/i/QZHFT1x.png"
   },
   {
     "id": 7,
@@ -105,7 +105,7 @@ const productos = [
     "acabado": "Laca mate, pintura epoxi",
     "apilables": "Hasta 6 sillas",
     "incluye": "Set de 4 sillas",
-    "imagen": "assets/img/Sillas Córdoba.png"
+    "imagen": "http://imgfz.com/i/XFQdVKt.png"
   },
   {
     "id": 10,
@@ -117,7 +117,7 @@ const productos = [
     "acabado": "Laca mate resistente",
     "almacenamiento": "1 cajón con organizador",
     "cables": "Pasacables integrado",
-    "imagen": "assets/img/Escritorio Costa.png"
+    "imagen": "http://imgfz.com/i/e5hIYtV.png"
   },
   {
     "id": 11,
@@ -129,7 +129,7 @@ const productos = [
     "acabado": "Base cromada, tapizado premium",
     "regulacion": "Altura + inclinación respaldo",
     "certificacion": "Ergonomía europea EN 1335",
-    "imagen": "assets/img/Silla de Trabajo Belgrano.png"
+    "imagen": "http://imgfz.com/i/r9w8F3p.png"
   },
   {
     "id": 12,
@@ -141,7 +141,7 @@ const productos = [
     "acabado": "Aceite natural, tapizado premium",
     "colchon": "Compatible con colchón 160×200",
     "caracteristicas": "Cabecero flotante acolchado",
-    "imagen": "assets/img/logo.svg"
+    "imagen": "https://preview.redd.it/opkl4q86bp271.png?width=640&crop=smart&auto=webp&s=5ee70e3afc3e04a6b445add757d49e28e3b66133"
   }];
 
   module.exports = productos;

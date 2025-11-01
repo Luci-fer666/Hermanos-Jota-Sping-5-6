@@ -38,7 +38,7 @@ function ProductList() {
                   nombre={producto.nombre}
                   precio={producto.precio}
                   descripcion={producto.descripcion}
-                  imagen={producto.imagen}
+                  imagen={producto.imagenUrl}
                 />
             </li>
             ))}

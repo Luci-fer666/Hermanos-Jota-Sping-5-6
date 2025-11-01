@@ -60,7 +60,7 @@ function ProductoDetail({ agregarAlCarrito }) {
     <main id="producto-individual">
       <div id="producto-caracteristicas-container">
         <h2>{producto.nombre}</h2>
-        <img id="imagen" src={producto.imagen} alt={producto.nombre} />
+        <img id="imagen" src={producto.imagenUrl} alt={producto.nombre} />
         <div>
           <strong>Descripción:</strong> {producto.descripcion} 
         </div>
@@ -69,12 +69,11 @@ function ProductoDetail({ agregarAlCarrito }) {
       <div id="producto-caracteristicas">
         <h3 id="precio"><strong>Precio:</strong> $ {producto.precio}</h3>
         <div id="producto-detalle">
+
           <ul>
             <li><strong>Medidas:</strong> {producto.medidas}</li>
             <li><strong>Materiales:</strong> {producto.materiales}</li>
-            <li><strong>Acabado:</strong> {producto.acabado}</li>
-            <li><strong>Capacidad:</strong> {producto.capacidad}</li>
-            <li><strong>Peso:</strong> {producto.peso}</li>
+            <li><strong>Mas Caracteristicas:</strong> {producto.masCaracteristicas} </li>
           </ul>
         </div>
         <button

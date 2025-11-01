@@ -5,10 +5,13 @@ import './CrearProducto.css';
 function CrearProducto() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    nombre: '',
-    descripcion: '',
-    precio: '',
-    imagenUrl: ''
+    nombre: "",
+    imagenUrl: '',
+    precio: "",
+    descripcion: "",
+    medidas: "",
+    materiales: "",
+    masCaracteristicas: "",
   });
 
   const handleChange = (e) => {
@@ -38,7 +41,7 @@ function CrearProducto() {
       const result = await response.json();
       alert(`¡Creacion exitosa para ${result.nombre}`);
       
-      setFormData({ nombre: '', descripcion: '', precio: '', imagenUrl: ''});
+      setFormData({ nombre: '', imagenUrl: '', precio: '', descripcion: '', medidas: "", materiales: "", masCaracteristicas: ""});
       //navigate(`/producto/${result._id}`);
       navigate("/productos")
  
@@ -47,69 +50,95 @@ function CrearProducto() {
     }
   };
 
-  return (
-    <form className="form-crear-producto" onSubmit={handleSubmit}>
-      <h3 className="form-titulo">Crear nuevo producto</h3>
+return (
+    <div className="crear-producto-container">
+      <h2 className="titulo-formulario">Agregar nuevo producto</h2>
+      <form className="formulario-producto" onSubmit={handleSubmit}>
+        
+        <div className="campo-formulario">
+          <label htmlFor="nombre">Nombre del producto:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            value={formData.nombre}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-      <div className="form-grupo">
-        <label htmlFor="nombre">Nombre del producto</label>
-        <input
-          type="text"
-          id="nombre"
-          name="nombre"
-          value={formData.nombre}
-          onChange={handleChange}
-          placeholder="Ej: Silla cuantica"
-          className="form-input"
-          required
-        />
-      </div>
+        <div className="campo-formulario">
+          <label htmlFor="imagenUrl">Imagen del Producto</label>
+          <input
+            type="url"
+            id="imagenUrl"
+            name="imagenUrl"
+            value={formData.imagenUrl}
+            onChange={handleChange}
+          />
+        </div>
 
-        <div className="form-grupo">
-        <label htmlFor="imagenUrl">imagenUrl</label>
-        <input
-          type="url"
-          id="imagenUrl"
-          name="imagenUrl"
-          value={formData.imagenUrl}
-          onChange={handleChange}
-          placeholder="htttp://localhost:3000/"
-          className="form-input"
-        />
-      </div>
+        <div className="campo-formulario">
+          <label htmlFor="precio">Precio:</label>
+          <input
+            type="number"
+            id="precio"
+            name="precio"
+            value={formData.precio}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-      <div className="form-grupo">
-        <label htmlFor="descripcion">Descripción</label>
-        <input
-          type="text"
-          id="descripcion"
-          name="descripcion"
-          value={formData.descripcion}
-          onChange={handleChange}
-          placeholder="Breve descripción del producto"
-          className="form-input"
-        />
-      </div>
+        <div className="campo-formulario">
+          <label htmlFor="descripcion">Descripción:</label>
+          <textarea
+            id="descripcion"
+            name="descripcion"
+            value={formData.descripcion}
+            onChange={handleChange}
+            rows="4"
+          ></textarea>
+        </div>
 
-      <div className="form-grupo">
-        <label htmlFor="precio">Precio</label>
-        <input
-          type="number"
-          id="precio"
-          name="precio"
-          value={formData.precio}
-          onChange={handleChange}
-          placeholder="Ej: 1500"
-          className="form-input"
-          required
-        />
-      </div>
+        <div className="campo-formulario">
+          <label htmlFor="medidas">Medidas:</label>
+          <input
+            type="text"
+            id="medidas"
+            name="medidas"
+            value={formData.medidas}
+            onChange={handleChange}
+          />
+        </div>
 
-      <button type="submit" className="btn-enviar">
-        Crear Producto
-      </button>
-    </form>
+        <div className="campo-formulario">
+          <label htmlFor="materiales">Materiales:</label>
+          <input
+            type="text"
+            id="materiales"
+            name="materiales"
+            value={formData.materiales}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="campo-formulario">
+          <label htmlFor="masCaracteristicas">Más características:</label>
+          <textarea
+            id="masCaracteristicas"
+            name="masCaracteristicas"
+            value={formData.masCaracteristicas}
+            onChange={handleChange}
+            rows="3"
+          ></textarea>
+        </div>
+
+        <button type="submit" className="btn-crear">
+          Crear Producto
+        </button>
+      </form>
+    </div>
   );
 }
-
 export default CrearProducto;
