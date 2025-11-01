@@ -1,5 +1,5 @@
 import './ProductosBody.css';
-import ProductList from './ProductList.js';
+import ProductList from '../../components/ProductList/ProductList.js';
 
 function ProductosBody() {
     return (<>

@@ -1,5 +1,5 @@
 import './BodyCarrito.css';
-import ProductCard from './ProductCard';
+import ProductCard from '../../components/ProductCard/ProductCard';
 import React, { useState, useEffect } from 'react';
 
 function CarritoBody({carrito, verDetalleProducto}) {

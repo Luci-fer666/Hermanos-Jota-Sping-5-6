@@ -1,11 +1,11 @@
-import Navbar from './components/Navbar.js';
-import Footer from './components/Footer.js';
-import ProductosBody from './components/ProductosBody.js';
-import ProductoIndividualBody from './components/ProductDetail.js';
-import CarritoBody from './components/BodyCarrito.js';
-import CrearProducto from './components/CrearProducto.js';
-import ContactForm from './components/ContactForm.js';
-import IndexBody from './components/BodyIndex.js';
+import Navbar from './components/Navbar/Navbar.js';
+import Footer from './components/Footer/Footer.js';
+import ProductosBody from './pages/ProductosPage/ProductosBody.js';
+import ProductoIndividualBody from './pages/ProductosDetailPage/ProductDetail.js';
+import CarritoBody from './pages/CarritoPage/BodyCarrito.js';
+import CrearProducto from './components/CrearProducto/CrearProducto.js';
+import ContactForm from './components/ContactForm/ContactForm.js';
+import IndexBody from './pages/HomePage/BodyIndex.js';
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
