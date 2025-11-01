@@ -1,15 +1,19 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import './ProductDetail.css';
 
-function ProductoDetail({ id, agregarAlCarrito }) {
+function ProductoDetail({ agregarAlCarrito }) {
+  const { id } = useParams();
   const [producto, setProducto] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchProducto = async () => {
+      setLoading(true);
+      setError(null);
       try {
-        const response = await fetch(`/products/${id}`);
+        const response = await fetch(`http://localhost:4000/api/productos/${id}`);
         if (!response.ok) {
           throw new Error('La respuesta de la red no fue satisfactoria');
         }
@@ -57,9 +61,9 @@ function ProductoDetail({ id, agregarAlCarrito }) {
         <button
           className="btn"
           type="button"
-          data-id={producto.id}
+          data-id={producto._id}
           onClick={() => {
-            agregarAlCarrito(producto.id);
+            agregarAlCarrito(producto._id);
             alert(`El producto "${producto.nombre}" se agregó al carrito`);
           }}
         >

@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const Product = require('./DB/models/Product');
+const Producto = require('./DB/models/Product');
 const { notFound, errorHandlerServer } = require('./middleware/errorHandlers');
 const PORT = process.env.PORT || 4000;
 
@@ -55,7 +55,7 @@ app.get('/api/productos/:id', async (req, res, next) => {
       error.status = 404;
       return next(error); // termina en el manejador de errores
     }
-    res.status(200).json(usuario);
+    res.status(200).json(producto);
   } catch (error) {
     console.error('Error al buscar producto por su ID: ', error.message);
     error.status = 400;
@@ -66,7 +66,7 @@ app.get('/api/productos/:id', async (req, res, next) => {
 // END POINT 3: Crear nuevo producto
 app.post('/api/productos', async (req, res, next) => {
   try {
-    const nuevoProducto = new Product(req.body);
+    const nuevoProducto = new Producto(req.body);
     const productoGuardado = await nuevoProducto.save();
     res.status(201).json({message: 'Producto creado', producto: productoGuardado});
   } catch (error) {
@@ -81,7 +81,7 @@ app.put('/api/productos/:id', async (req, res, next) => {
     const productoId = req.params.id;
     const datosActualizados = req.body;
 
-    const productoActualizado = await Product.findByIdAndUpdate(usuarioID, datosActualizados, {new: true, runValidators: true});
+    const productoActualizado = await Producto.findByIdAndUpdate(productoId, datosActualizados, {new: true, runValidators: true});
 
     // si no encuentra el producto, no se actualiza
     if (!productoActualizado) {
@@ -105,7 +105,7 @@ app.put('/api/productos/:id', async (req, res, next) => {
 app.delete(('/api/productos/:id'), async (req, res, next) => {
   try {
     const productoId = req.params.id;
-    const productoEliminado = await Product.findByIdAndDelete(productoId);
+    const productoEliminado = await Producto.findByIdAndDelete(productoId);
 
     if (!productoEliminado) {
       const error = new Error('No se encontró el producto a eliminar.');
