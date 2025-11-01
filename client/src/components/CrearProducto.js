@@ -38,8 +38,8 @@ function CrearProducto() {
       if (!response.ok) {
         throw new Error('La creacion falló.');
       }
-      const result = await response.json();
-      alert(`¡Creacion exitosa para ${result.nombre}`);
+      //const result = await response.json();
+      alert(`¡Creacion exitosa para ${formData.nombre}`);
       
       setFormData({ nombre: '', imagenUrl: '', precio: '', descripcion: '', medidas: "", materiales: "", masCaracteristicas: ""});
       //navigate(`/producto/${result._id}`);
