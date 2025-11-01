@@ -29,7 +29,7 @@ function CarritoBody({carrito, verDetalleProducto}) {
   if (error) {
 	return <p>Error al cargar los datos: {error.message}</p>; }
 
-	const productosEnCarrito = productos.filter(p => carrito.includes(p.id));
+	const productosEnCarrito = productos.filter(p => carrito.includes(p._id));
     return (<>
     	<main className="contenido">
 			<div className="background-main">

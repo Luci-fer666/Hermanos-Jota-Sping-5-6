@@ -34,7 +34,7 @@ function ProductList() {
           {productos.map(producto => (
             <li key={producto._id}>
               <ProductCard 
-                  id={producto.id}
+                  id={producto._id}
                   nombre={producto.nombre}
                   precio={producto.precio}
                   descripcion={producto.descripcion}

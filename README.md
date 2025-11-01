@@ -1,8 +1,8 @@
 <h1>Repositorio del grupo 14</h1>
 
 # Mueblería Hermanos Jota — Sprint 5 y 6
- Sitio web dinamico con HTML, CSS y JavaScript utilizando tecnologias React y ExpressJS con NodeJS. Incluyendo funcionalidades de React Router, Fetch para la conexion con la APi y además de implementación de una base de datos externa en MongoDB y Mongosee
-Incluye páginas de inicio, catálogo de productos, detalle de producto y formulario de contacto con validaciones.
+    Sitio web dinamico con HTML, CSS y JavaScript utilizando tecnologias React y ExpressJS con NodeJS. Incluyendo funcionalidades de React Router, Fetch para la conexion con la APi y además de implementación de una base de datos externa en MongoDB y Mongosee
+    Incluye páginas de inicio, catálogo de productos, detalle de producto y formulario de contacto con validaciones.
 
 <div><b>Programadores: </b>
     <ul>
@@ -43,33 +43,31 @@ contratado a ustedes para construir su primera plataforma de e-commerce.</p>
 - CSS3 (Flexbox, Grid, responsive)
 - JavaScript (ES6, manipulación del DOM, localStorage)
 - React
-- React Router
+- React Router DOM
+- Manejo de CORS con Proxy
 - ExpressJS
 - NodeJS
 - MongoDB
 - Mongosee
 - GitHub Pages para el deploy
 
-## Funcionalidades
-- Página de inicio con productos destacados.
-- Catálogo generado dinámicamente desde un array de objetos.
-- Detalle de producto identificado por parámetro `?id=`. 
-- Formulario de contacto con validación en cliente.
-- Diseño responsive con Flexbox y Grid.
-
 ## Descripcion
 El backend se aloja en el puerto 4000, teniendo las rutas 
-- http://localhost:4000/                Ruta de inicio
-- http://localhost:4000/products        Muestra todos los productos como JSON
-- http://localhost:4000/products/{id}   Muestra el producto del id seleccionado como JSON
-- http://localhost:4000/users           Muestra todos los usuarios como JSON
-- http://localhost:4000/users/{id}      Muestra el usuario con el id seleccionado como JSON
+- GET <b>"/api/productos"</b> Devuelve todos los productos de la colección.
+- GET <b>"/api/productos/:id"</b> Devuelve un único producto por su _id.
+- POST <b>"/api/productos"</b> Recibe los datos de un nuevo producto en req.body, crea un nuevo documento en la base de datos y lo devuelve con un estado 201.
+- PUT <b>"/api/productos/:id"</b> Recibe datos actualizados en req.body y modifica el producto correspondiente en la base de datos.
+- DELETE <b>"/api/productos/:id"</b> Elimina un producto de la base de datos por su _id
 
-Cuenta con dos Routers(para productos y para usuarios), un logger para las peticiones del servidor, un midelware de rutas no encontradas, manejador de errores centralizado y traductor de JSON. 
+Por el lado del frontend, este se aloja en el puerto 3000, teniendo las rutas
+- Inicio <b>"/"</b>
+- El catálogo <b>"/productos"<b>
+- El detalle de producto <b>"/productos/:id"</b>
+- El formulario de contacto <b>"/contacto"</b>
+- Añadir productos <b>"/admin/crear-producto"</b>
 
-Por el lado del frontend, este se aloja en el puerto 3000, teniendo una sola ruta
-- http://localhost:3000/
-Este apartado cuenta con secciones de Inicio, Productos, Contacto y un Carrito, los cuales comparten espacio un unico archivo html, mostrando solo el componente que es requerido en el momento indicado.
+Este apartado cuenta con secciones de Inicio, Productos,, Producto Individual, Creacion de Producto, Contacto y un Carrito, los cuales comparten espacio un unico archivo html utilizando React Router DOM para gestionar la navegación.
+
 Cuenta con componentes de: 
 - Navbar            Header, Barra de Navegacion con icono del Carrito Actualizable
 - Footer            Footer con datos varios
@@ -84,6 +82,7 @@ Cuenta con componentes de:
                     array segun el id
 - ContactForm       Body del apartado contactos, con opciones de enviar mensaje 
                     y visualizar datos de contacto
+-CrearProducto      Formulario para crear un nuevo producto
 
 ## Cómo ejecutar
  Proyecto React + Express
