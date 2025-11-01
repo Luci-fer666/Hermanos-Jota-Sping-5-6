@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import './ProductDetail.css';
 
 function ProductoDetail({ id, agregarAlCarrito }) {
@@ -7,6 +8,7 @@ function ProductoDetail({ id, agregarAlCarrito }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    const {id} = useParams
     const fetchProducto = async () => {
       try {
         const response = await fetch(`/products/${id}`);
