@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const mongoose = require('mongoose');
 const Producto = require('./DB/models/Product');
@@ -12,6 +13,9 @@ mongoose.connect(DB_URL).then(() => console.log('Conexión exitosa a MongoDB Atl
 
 // Middleware global para parsear JSON
 app.use(express.json());
+
+// para que se pueda enlazar con vercel
+app.use(cors());
 
 // Logger de peticiones
 const logger = require('./logger');
