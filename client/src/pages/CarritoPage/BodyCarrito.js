@@ -10,7 +10,7 @@ function CarritoBody({carrito, verDetalleProducto}) {
   useEffect(() => {
 	const fetchProducts = async () => {
 	  try {
-		const response = await fetch('${process.env.REACT_APP_API_URL}/api/productos');
+		const response = await fetch(`${process.env.REACT_APP_API_URL}/api/productos`);
 		if (!response.ok) {
 		  throw new Error('La respuesta de la red no fue satisfactoria');
 		}
