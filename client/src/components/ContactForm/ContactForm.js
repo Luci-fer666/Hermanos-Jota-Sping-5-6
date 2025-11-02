@@ -7,6 +7,9 @@ function ContactForm() {
     mensaje: ""
   });
 
+  const handleSubmit = async (event) => {
+    event.preventDefault()}; // asi no se recarga la pag
+
   const [exito, setExito] = useState(false);
 
   const Cambio = (e) => {
@@ -33,7 +36,7 @@ function ContactForm() {
           <div className="container-form">
             <h2>¡Dejanos tu mensaje!</h2>
 
-            <form onSubmit={Envio} id="form-contacto" className="formulario" action="#" method="post" noValidate>
+            <form onSubmit={Envio} id="form-contacto" className="formulario" action="#" method="post">
               <div className="campo-formulario">
                 <label htmlFor="nombre">Nombre:</label>
                 <input
