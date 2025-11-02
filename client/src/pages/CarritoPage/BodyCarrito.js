@@ -40,11 +40,11 @@ function CarritoBody({carrito, verDetalleProducto}) {
 					{productosEnCarrito.map(producto => (
 						<ProductCard  
 							verDetalleProducto={verDetalleProducto}
-							id={producto.id}
+							id={producto._id}
 							nombre={producto.nombre}
 							precio={producto.precio}
 							descripcion={producto.descripcion}
-							imagen={producto.imagen}/>
+							imagen={producto.imagenUrl}/>
 						))}
 					</ul>
 
