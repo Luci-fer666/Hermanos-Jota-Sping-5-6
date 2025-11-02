@@ -14,7 +14,7 @@ function ProductoDetail({ agregarAlCarrito }) {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch(`/api/productos/${id}`);
+        const response = await fetch(`https://hermanos-jota-sping-5-6.onrender.com/api/productos/${id}`);
         if (!response.ok) {
           throw new Error('La respuesta de la red no fue satisfactoria D:');
         }
@@ -41,7 +41,7 @@ function ProductoDetail({ agregarAlCarrito }) {
   const EliminarProducto = async () => {
     if (!window.confirm(`¿Seguro que querés este producto super cool llamado: "${producto.nombre}"?`)) return;
     try {
-    const response = await fetch(`/api/productos/${producto._id}`, {
+    const response = await fetch(`https://hermanos-jota-sping-5-6.onrender.com/api/productos/${producto._id}`, {
       method: 'DELETE',
     });
 

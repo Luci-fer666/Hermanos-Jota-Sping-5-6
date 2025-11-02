@@ -27,7 +27,7 @@ function CrearProducto() {
     console.log("Datos a enviar:", formData);
  
     try {
-      const response = await fetch('/api/productos', {
+      const response = await fetch('https://hermanos-jota-sping-5-6.onrender.com/api/productos', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

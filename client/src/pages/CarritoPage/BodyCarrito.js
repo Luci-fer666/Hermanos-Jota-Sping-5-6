@@ -10,7 +10,7 @@ function CarritoBody({carrito, verDetalleProducto}) {
   useEffect(() => {
 	const fetchProducts = async () => {
 	  try {
-		const response = await fetch('/api/productos');
+		const response = await fetch('https://hermanos-jota-sping-5-6.onrender.com/api/productos');
 		if (!response.ok) {
 		  throw new Error('La respuesta de la red no fue satisfactoria');
 		}
