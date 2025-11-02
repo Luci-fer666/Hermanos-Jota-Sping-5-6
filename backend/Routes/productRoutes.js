@@ -3,7 +3,7 @@ const router = express.Router();
 const productos = require('../productos');
 const Producto = require('../DB/models/Product');
 
-// GET /products → devuelve todos los productos
+// GET /productos → devuelve todos los productos
 router.get('/', async (req, res) => {
   try {
     const todosLosProductos = await Producto.find({});
@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// GET /products/:id → devuelve un producto por ID
+// GET /productos/:id → devuelve un producto por ID
 router.get('/:id', async (req, res) => {
   try {
     const id = req.params.id;

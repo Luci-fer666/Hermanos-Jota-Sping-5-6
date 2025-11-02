@@ -26,7 +26,7 @@ const userRoutes = require('./Routes/userRoutes');
 const productRoutes = require('./Routes/productRoutes');
 
 app.use('/users', userRoutes);
-app.use('/products', productRoutes);
+app.use('/productos', productRoutes);
 
 // Ruta raíz solo para checkear que el servidor está vivo
 app.get('/', (req, res) => {
