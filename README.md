@@ -113,7 +113,8 @@ Cuenta con componentes de:
         </ul>
 </ol>
 
+
 ## Capturas
-<img width="1332" height="652" alt="Screenshot 2025-09-07 221232" src="https://github.com/user-attachments/assets/52b4d8f6-ade8-458e-91d9-75cc66d740be" />
-<img width="1325" height="639" alt="Screenshot 2025-09-07 221244" src="https://github.com/user-attachments/assets/f832d9f5-e894-4a1b-8dd5-3a75fe4e2017" />
-<img width="1331" height="644" alt="Screenshot 2025-09-07 221253" src="https://github.com/user-attachments/assets/2ca77cee-0fa4-493f-a938-215e8e1f1f43" />
+<img width="1920" height="1080" alt="Captura de pantalla 2025-11-01 215833" src="https://github.com/user-attachments/assets/6790490b-6fca-424e-ad5b-37ecd474f008" />
+<img width="1920" height="1080" alt="Captura de pantalla 2025-11-01 220640" src="https://github.com/user-attachments/assets/f78477ee-a0e8-42ca-b9b4-715a888a98c8" />
+<img width="1920" height="1080" alt="Captura de pantalla 2025-11-01 220750" src="https://github.com/user-attachments/assets/b919e1c7-cec0-4476-8a17-9cf6aac24623" />
